@@ -2,7 +2,7 @@
 
 {% set version = "1.0.2" %}
 {% set git_rev = "1.0.2" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 {% set sha256 = "7fbc80eb52622aa9541a384828c73165242bff05cc1719051bbf91ffeacad5f3" %}
 
 package:
@@ -15,6 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: {{ build_number }}
   script: python -m pip install --no-deps --ignore-installed .
 
