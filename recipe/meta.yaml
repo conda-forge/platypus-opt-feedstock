@@ -27,6 +27,7 @@ requirements:
   run:
     - python
     - six
+    - numpy
 
 test:
   imports:
