@@ -1,9 +1,9 @@
 {% set name = "Platypus-Opt" %}
 
-{% set version = "1.0.2" %}
-{% set git_rev = "1.0.2" %}
-{% set build_number = 1 %}
-{% set sha256 = "7fbc80eb52622aa9541a384828c73165242bff05cc1719051bbf91ffeacad5f3" %}
+{% set version = "1.0.3" %}
+{% set git_rev = "7c6317a073ce3440bfdc5824fed4f7aeec8835a3" %}
+{% set build_number = 0 %}
+{% set sha256 = "af1f3d68d82f5d1b213c64eed1ec919df1dd455b82d3fe92facdf3e8a071e2ac" %}
 
 package:
   name: '{{ name|lower }}'
@@ -27,6 +27,7 @@ requirements:
   run:
     - python
     - six
+    - numpy
 
 test:
   imports:
