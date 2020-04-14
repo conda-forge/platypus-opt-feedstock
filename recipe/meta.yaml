@@ -1,23 +1,23 @@
 {% set name = "Platypus-Opt" %}
 
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 {% set git_rev = "7c6317a073ce3440bfdc5824fed4f7aeec8835a3" %}
 {% set build_number = 0 %}
-{% set sha256 = "af1f3d68d82f5d1b213c64eed1ec919df1dd455b82d3fe92facdf3e8a071e2ac" %}
+{% set sha256 = "bf62d2068b680e592b4f503bc572e3a4a79d8ef12b7ad6771501a8922f77405c" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz  
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   number: {{ build_number }}
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -47,7 +47,7 @@ about:
   summary: Multiobjective optimization in Python
   doc_url: http://platypus.readthedocs.org/en/latest/index.html
   dev_url: https://github.com/Project-Platypus/Platypus
-  
+
 extra:
-  recipe-maintainers:  
+  recipe-maintainers:
     - jetuk
