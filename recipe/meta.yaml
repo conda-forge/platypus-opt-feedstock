@@ -28,14 +28,10 @@ requirements:
     - numpy
 
 test:
-  imports:
-    - platypus
   requires:
-    - mock
-    - nose
-  source_files:
-    - pyproject.toml
-    - platypus/*
+    - pytest
+  commands:
+    - pytest --pyargs platypus
 
 about:
   home: https://github.com/Project-Platypus/Platypus
