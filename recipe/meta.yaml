@@ -23,10 +23,8 @@ requirements:
   host:
     - python
     - pip
-    - six
   run:
     - python
-    - six
     - numpy
 
 test:
@@ -36,7 +34,7 @@ test:
     - mock
     - nose
   source_files:
-    - setup.py
+    - pyproject.toml
     - platypus/*
 
 about:
