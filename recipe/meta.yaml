@@ -1,9 +1,9 @@
 {% set name = "Platypus-Opt" %}
 
-{% set version = "1.0.4" %}
+{% set version = "1.1.0" %}
 {% set git_rev = "7c6317a073ce3440bfdc5824fed4f7aeec8835a3" %}
 {% set build_number = 0 %}
-{% set sha256 = "bf62d2068b680e592b4f503bc572e3a4a79d8ef12b7ad6771501a8922f77405c" %}
+{% set sha256 = "19610123c204e2dfc10741c69403b57a649589d9494de0fce0fc27579e586bbd" %}
 
 package:
   name: {{ name|lower }}
