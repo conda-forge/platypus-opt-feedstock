@@ -1,9 +1,9 @@
 {% set name = "Platypus-Opt" %}
 
-{% set version = "1.2.0" %}
+{% set version = "1.4.1" %}
 {% set git_rev = "7c6317a073ce3440bfdc5824fed4f7aeec8835a3" %}
 {% set build_number = 0 %}
-{% set sha256 = "f7150de2e24f8003c911259c575493c9351a7dcfb132445a3f3b096728634e6a" %}
+{% set sha256 = "b341790be67354c2c964bb3431b9acc8a1a147aca9d9464a43720dc58b3895e8" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
